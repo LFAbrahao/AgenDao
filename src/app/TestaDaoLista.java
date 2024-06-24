@@ -15,7 +15,7 @@ public class TestaDaoLista {
 			System.out.println("Nome do contato: "+contato.getNome());
 			System.out.println("Email do contato: "+contato.getEmail());
 			System.out.println("Endereço do contato: "+contato.getEndereco());
-			System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+			System.out.println("=============================================");
 		}
 	}
 
