@@ -14,8 +14,8 @@ public class JdbcInsere {
 			Connection con =  ConnectionFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(sql);
 			
-			stmt.setString(1, "Clayton");
-			stmt.setString(2, "clayton@gmail.com");
+			stmt.setString(1, "Guilherme");
+			stmt.setString(2, "guilherme@gmail.com");
 			stmt.setString(3, "Av. Brasil, 1000");
 			
 			stmt.execute();

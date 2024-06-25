@@ -13,6 +13,7 @@ public class Contato {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -36,7 +37,5 @@ public class Contato {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	
-	
 
 }
