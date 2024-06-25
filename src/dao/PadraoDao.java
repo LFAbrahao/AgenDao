@@ -14,7 +14,9 @@ public interface PadraoDao {
 
     Contato getPorId(Long id) throws SQLException;
 
-    void alteraPorId(String id) throws SQLException;
+//   void alteraPorId(String id) throws SQLException;
 
     void removePorId(String id) throws SQLException;
+
+	void alteraPorId(Long id, String novoNome, String novoEmail, String novoEndereco) throws SQLException;
 }
