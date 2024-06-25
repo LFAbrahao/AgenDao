@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Scanner;
+
 import javabanco.ConnectionFactory;
 import model.Contato;
 
@@ -14,10 +16,16 @@ public class ContatoDao implements PadraoDao {
 
 	private Connection con;
 
+	public ContatoDao() throws SQLException {
+		this.con = new ConnectionFactory().getConnection();
+	}
+
 	@Override
 	public void adiciona(Contato contato) throws SQLException {
 		String sql = "insert into contatos(nome, email, endereco) values (?,?,?)";
 		PreparedStatement stmt = con.prepareStatement(sql);
+		Scanner sc = new Scanner(System.in);
+
 		stmt.setString(1, contato.getNome());
 		stmt.setString(2, contato.getEmail());
 		stmt.setString(3, contato.getEndereco());
@@ -51,22 +59,36 @@ public class ContatoDao implements PadraoDao {
 	}
 
 	@Override
-	public void getPorLetra() throws SQLException {
+	public void getPorLetra(String letra) throws SQLException {
 
 	}
 
 	@Override
-	public void getPorId() throws SQLException {
+	public Contato getPorId(Long id) throws SQLException {
+		String query = "select * from contatos where id = ?";
+		Contato contato = null;
+		try (PreparedStatement stmt = con.prepareStatement(query)) {
+			stmt.setLong(1, id);
+			try (ResultSet rset = stmt.executeQuery()) {
+				if (rset.next()) {
+					contato = new Contato();
+					contato.setId(rset.getLong("id"));
+					contato.setNome(rset.getString("nome"));
+					contato.setEmail(rset.getString("email"));
+					contato.setEndereco(rset.getString("endereco"));
+				}
+			}
+		}
+		return contato;
+	}
+
+	@Override
+	public void alteraPorId(String id) throws SQLException {
 
 	}
 
 	@Override
-	public void alteraPorId() throws SQLException {
-
-	}
-
-	@Override
-	public void removePorId() throws SQLException {
+	public void removePorId(String id) throws SQLException {
 
 	}
 

@@ -1,13 +1,25 @@
 
 ¡
-java:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìœ¼ùÿÿÿÿ8ù…äæ„2J$f72aef64-628c-4cef-b2e9-b0f954d9b42f
-Ä
-java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ï¢ıì8•†äæ„2J$db4b94b1-8024-4c17-8838-d13f5d2452c8
+java:S2293,"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìœ¼ùÿÿÿÿ8ÂÀßç„2J$28e222b3-467a-4459-bf16-c6177d0effef
+’
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8ÏÀßç„2J$97bc159c-f6bc-4932-b3ae-5452432d68c5
+‘
+java:S2095*"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(˜àñY8ÏÀßç„2J$359069f4-97ea-4094-ba1f-493a6b076a0f
 É
-java:S1186;"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Éßşÿÿÿÿ8–†äæ„2J$49e1e7b4-a757-47d0-85fa-432bdc393130
+java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ†µÉùÿÿÿÿ8ĞÀßç„2J$92f45310-c1c4-4f85-abf0-8f9599555fe9
 Ä
-java:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(â»…©8–†äæ„2J$1b6b92e6-ae76-4259-bd7c-113fead687b3
+java:S1186V"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰À—8ĞÀßç„2J$17f9e0ea-4edb-45d6-a275-4a725739d3d3
 É
-java:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(µ™ÈÕüÿÿÿÿ8–†äæ„2J$c587210c-3d4f-4159-bc98-3620e7b73e70
+java:S1186["€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™Ïíÿÿÿÿÿ8ĞÀßç„2J$f02897f8-b7e3-4516-bd3c-b1ed71b5ea70
+x
+java:S2209"5Change this instance-reference to a static reference.(Ìââó8ÒÀßç„2J$9fd51be2-6e13-446a-8d17-2233fa2b83b2
+t
+java:S2440"1Remove this instantiation of "ConnectionFactory".(Ìââó8ÒÀßç„2J$9e7decdb-8fb1-4473-a635-18e228954321
+~
+java:S1854"6Remove this useless assignment to local variable "sc".(ğÛ²¸øÿÿÿÿ8ÓÀßç„2J$47eed378-caea-43bc-9b24-4bf486e8c68b
+o
+java:S1481"'Remove this unused "sc" local variable.(ğÛ²¸øÿÿÿÿ8ÕÀßç„2J$969424aa-1311-41c1-9b00-4fa2070d63ca
 b
-java:S6905!"Don't use the query "SELECT *".(øâ¬8£†äæ„2J$fe3ca274-416b-4a5d-997d-e7cfe5b2febe
+java:S6905)"Don't use the query "SELECT *".(øâ¬8ÖÀßç„2J$f01fc5c1-f7d1-447e-abd8-715d82ef4746
+g
+java:S6905D"Don't use the query "SELECT *".(öÒ× øÿÿÿÿ8¢°è„2J$17b1c175-c916-4654-867c-cc9afd2623c9

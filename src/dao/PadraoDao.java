@@ -5,16 +5,16 @@ import model.Contato;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface PadraoDao<T> {
+public interface PadraoDao {
     void adiciona(Contato contato) throws SQLException;
 
     List<?> getLista() throws SQLException;
 
-    void getPorLetra() throws SQLException;
+    void getPorLetra(String letra) throws SQLException;
 
-    void getPorId() throws SQLException;
+    Contato getPorId(Long id) throws SQLException;
 
-    void alteraPorId() throws SQLException;
+    void alteraPorId(String id) throws SQLException;
 
-    void removePorId() throws SQLException;
+    void removePorId(String id) throws SQLException;
 }
