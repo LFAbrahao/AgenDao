@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface PadraoDao<T> {
-    void adiciona(T object) throws SQLException;
+    void adiciona(Contato contato) throws SQLException;
 
     List<?> getLista() throws SQLException;
 

@@ -11,8 +11,8 @@ import model.Contato;
 
 
 public class ContatoDao implements PadraoDao {
-	private Connection con;
 
+	private Connection con;
 
 	@Override
 	public void adiciona(Contato contato) throws SQLException {
@@ -27,11 +27,6 @@ public class ContatoDao implements PadraoDao {
 		stmt.close();
 		con.close();
 	}
-
-//	@Override
-//	public void adiciona(Contato contato) throws SQLException {
-//
-//	}
 
 	@Override
 	public List<Contato> getLista() throws SQLException {
