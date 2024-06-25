@@ -10,7 +10,7 @@ public interface PadraoDao {
 
     List<?> getLista() throws SQLException;
 
-    void getPorLetra(String letra) throws SQLException;
+    List<Contato> getPorLetra(String letra) throws SQLException;
 
     Contato getPorId(Long id) throws SQLException;
 

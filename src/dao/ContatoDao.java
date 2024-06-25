@@ -59,8 +59,24 @@ public class ContatoDao implements PadraoDao {
 	}
 
 	@Override
-	public void getPorLetra(String letra) throws SQLException {
+	public List<Contato> getPorLetra(String letra) throws SQLException {
+		String query = "select * from contatos where nome like ?";
+		List<Contato> contatos = new ArrayList<>();
+		try (PreparedStatement stmt = con.prepareStatement(query)) {
+			stmt.setString(1, letra + "%");
+			try (ResultSet rset = stmt.executeQuery()) {
+				while (rset.next()) {
+					Contato contato = new Contato();
+					contato.setId(rset.getLong("id"));
+					contato.setNome(rset.getString("nome"));
+					contato.setEmail(rset.getString("email"));
+					contato.setEndereco(rset.getString("endereco"));
+					contatos.add(contato);
+				}
+			}
 
+		}
+		return contatos;
 	}
 
 	@Override
@@ -89,7 +105,12 @@ public class ContatoDao implements PadraoDao {
 
 	@Override
 	public void removePorId(String id) throws SQLException {
+		String sql = "delete from contatos where id = ?";
 
+		try (PreparedStatement stmt = con.prepareStatement(sql)) {
+			stmt.setString(1, id);
+			stmt.executeUpdate();
+		}
 	}
 
 }
