@@ -73,10 +73,15 @@ public class ContatoDao implements PadraoDao {
 					contato.setEndereco(rset.getString("endereco"));
 					contatos.add(contato);
 				}
+				rset.close();
+				stmt.close();
+				con.close();
+
+				return contatos;
 			}
 
 		}
-		return contatos;
+
 	}
 
 	@Override
@@ -93,9 +98,13 @@ public class ContatoDao implements PadraoDao {
 					contato.setEmail(rset.getString("email"));
 					contato.setEndereco(rset.getString("endereco"));
 				}
+				rset.close();
+				stmt.close();
+				con.close();
+
+				return contato;
 			}
 		}
-		return contato;
 	}
 
 	@Override
@@ -111,6 +120,7 @@ public class ContatoDao implements PadraoDao {
 			stmt.setString(1, id);
 			stmt.executeUpdate();
 		}
+
 	}
 
 }

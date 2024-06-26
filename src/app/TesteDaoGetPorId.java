@@ -26,8 +26,8 @@ public class TesteDaoGetPorId {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            sc.close();
         }
+            sc.close();
+
     }
 }
