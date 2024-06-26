@@ -108,8 +108,22 @@ public class ContatoDao implements PadraoDao {
 	}
 
 	@Override
-	public void alteraPorId(String id) throws SQLException {
-
+	public void alteraPorId(Long id, String novoNome, String novoEmail, String novoEndereco) throws SQLException {
+	    String query = "UPDATE contatos SET nome = ?, email = ?, endereco = ? WHERE id = ?";
+	    
+	    try (PreparedStatement stmt = con.prepareStatement(query)) {
+	        stmt.setString(1, novoNome);
+	        stmt.setString(2, novoEmail);
+	        stmt.setString(3, novoEndereco);
+	        stmt.setLong(4, id);
+	        
+	        int linhasModificadas = stmt.executeUpdate();
+	        if (linhasModificadas> 0) {
+	            System.out.println("Contato atualizado com sucesso!");
+	        } else {
+	            System.out.println("Nenhum contato encontrado com o ID informado.");
+	        }
+	    }
 	}
 
 	@Override
