@@ -10,7 +10,7 @@ public class AgenDaoApplication {
         try {
             ContatoDao contatoDao = new ContatoDao();
             Scanner scanner = new Scanner(System.in);
-            int opcao;
+            String opcao;
 
             do {
                 System.out.println("Escolha uma opção: ");
@@ -20,14 +20,14 @@ public class AgenDaoApplication {
                 System.out.println("4. Alterar contato por ID");
                 System.out.println("5. Remover contato por ID");
                 System.out.println("6. Sair");
-                opcao = scanner.nextInt();
-                scanner.nextLine();
+                opcao = scanner.nextLine();
+                
 
                 switch (opcao) {
-                    case 1:
+                    case "1":
                         contatoDao.adiciona();
                         break;
-                    case 2:
+                    case "2":
                         List<Contato> contatos = contatoDao.getLista();
                         for (Contato contato : contatos) {
                             System.out.println("Nome do contato: "+contato.getNome());
@@ -36,7 +36,7 @@ public class AgenDaoApplication {
                             System.out.println("=============================================");
                         }
                         break;
-                    case 3:
+                    case "3":
                         System.out.print("Digite a letra para buscar os contatos: ");
                         String letra = scanner.nextLine();
                         List<Contato> contatosPorLetra = contatoDao.getPorLetra(letra);
@@ -48,19 +48,19 @@ public class AgenDaoApplication {
                             System.out.println("---------------------------------");
                         }
                         break;
-                    case 4:
+                    case "4":
                         System.out.print("Digite o ID do contato que deseja alterar: ");
                         Long idAlterar = scanner.nextLong();
                         scanner.nextLine();
                         contatoDao.alteraPorId(idAlterar);
                         break;
-                    case 5:
+                    case "5":
                         System.out.print("Digite o ID do contato que deseja remover: ");
                         Long idRemover = scanner.nextLong();
                         scanner.nextLine();
                         contatoDao.removePorId(idRemover);
                         break;
-                    case 6:
+                    case "6":
                         System.out.println("Saindo...");
                         contatoDao.closeConnection();
                         break;
@@ -68,10 +68,11 @@ public class AgenDaoApplication {
                         System.out.println("Opção inválida!");
                         break;
                 }
-            } while (opcao != 6);
+            } while (opcao != "6");
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+       
     }
 }
