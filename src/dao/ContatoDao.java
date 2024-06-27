@@ -21,7 +21,8 @@ public class ContatoDao implements PadraoDao {
 	}
 
 	@Override
-	public void adiciona(Contato contato) throws SQLException {
+	public void adiciona(Object object) throws SQLException {
+		Contato contato = (Contato) object;
 		String sql = "insert into contatos(nome, email, endereco) values (?,?,?)";
 		PreparedStatement stmt = con.prepareStatement(sql);
 		Scanner sc = new Scanner(System.in);
@@ -127,11 +128,11 @@ public class ContatoDao implements PadraoDao {
 	}
 
 	@Override
-	public void removePorId(String id) throws SQLException {
+	public void removePorId(Long id) throws SQLException {
 		String sql = "delete from contatos where id = ?";
 
 		try (PreparedStatement stmt = con.prepareStatement(sql)) {
-			stmt.setString(1, id);
+			stmt.setLong(1, id);
 			stmt.executeUpdate();
 		}
 

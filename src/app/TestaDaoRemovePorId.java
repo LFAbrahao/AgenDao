@@ -13,11 +13,11 @@ public class TestaDaoRemovePorId {
             System.out.println("Digita o Id que deseja excluir: ");
             String idContato = scanner.nextLine();
 
-            contatoDao.removePorId(idContato);
+            contatoDao.removePorId(Long.valueOf(idContato));
             System.out.println("Contato removido com sucesso.");
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Erro no SQL");
         }
     }
 }

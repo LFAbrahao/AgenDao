@@ -1,25 +1,35 @@
 
 ¡
-java:S2293,"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìœ¼ùÿÿÿÿ8ÂÀßç„2J$28e222b3-467a-4459-bf16-c6177d0effef
+java:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìœ¼ùÿÿÿÿ8ÖÀ´…2J$f5727d03-4e07-4cef-9813-6192c398b031
+Œ
+java:S11923"IDefine a constant instead of duplicating this literal "endereco" 3 times.(‡˜Ëİ8×À´…2J$c3c1c76c-02a3-4512-9e02-230827ab4e31
+
+java:S11922"FDefine a constant instead of duplicating this literal "email" 3 times.(·í’ıÿÿÿÿ8×À´…2J$9ea733b4-ee0c-4301-b208-f0547d3eccbf
 ’
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8ÏÀßç„2J$97bc159c-f6bc-4932-b3ae-5452432d68c5
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8çÀ´…2J$06d8a3eb-c66f-46fc-a58e-755148a32f64
 ‘
-java:S2095*"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(˜àñY8ÏÀßç„2J$359069f4-97ea-4094-ba1f-493a6b076a0f
-É
-java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ†µÉùÿÿÿÿ8ĞÀßç„2J$92f45310-c1c4-4f85-abf0-8f9599555fe9
-Ä
-java:S1186V"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰À—8ĞÀßç„2J$17f9e0ea-4edb-45d6-a275-4a725739d3d3
-É
-java:S1186["€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™Ïíÿÿÿÿÿ8ĞÀßç„2J$f02897f8-b7e3-4516-bd3c-b1ed71b5ea70
+java:S2095+"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(˜àñY8çÀ´…2J$c586e1f6-a357-4784-b359-8b5a74d74dd5
 x
-java:S2209"5Change this instance-reference to a static reference.(Ìââó8ÒÀßç„2J$9fd51be2-6e13-446a-8d17-2233fa2b83b2
+java:S2209"5Change this instance-reference to a static reference.(Ìââó8êÀ´…2J$74f584e5-fc0d-4730-a22e-bbd66520e7d2
 t
-java:S2440"1Remove this instantiation of "ConnectionFactory".(Ìââó8ÒÀßç„2J$9e7decdb-8fb1-4473-a635-18e228954321
+java:S2440"1Remove this instantiation of "ConnectionFactory".(Ìââó8ëÀ´…2J$cd62990d-1fd4-49b7-8f38-80feff7efcaf
 ~
-java:S1854"6Remove this useless assignment to local variable "sc".(ğÛ²¸øÿÿÿÿ8ÓÀßç„2J$47eed378-caea-43bc-9b24-4bf486e8c68b
+java:S1854"6Remove this useless assignment to local variable "sc".(ğÛ²¸øÿÿÿÿ8ëÀ´…2J$8721894b-ad5f-4822-9021-bc9b50cdceef
 o
-java:S1481"'Remove this unused "sc" local variable.(ğÛ²¸øÿÿÿÿ8ÕÀßç„2J$969424aa-1311-41c1-9b00-4fa2070d63ca
+java:S1481"'Remove this unused "sc" local variable.(ğÛ²¸øÿÿÿÿ8îÀ´…2J$15b16881-015f-4f9a-a982-929d0013722e
 b
-java:S6905)"Don't use the query "SELECT *".(øâ¬8ÖÀßç„2J$f01fc5c1-f7d1-447e-abd8-715d82ef4746
+java:S6905*"Don't use the query "SELECT *".(øâ¬8ïÀ´…2J$cbde5e4e-842a-4cf8-8ac8-69f1136da527
+ª
+java:S4087N"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Æ€»Çùÿÿÿÿ8òÀ´…2J$699f95be-ddfa-44e5-b171-050fd57366a2
+b
+java:S6905@"Don't use the query "SELECT *".(ã¦åº8óÀ´…2J$1bd65c1e-9ec8-4110-9a58-2c45dba922f8
+ª
+java:S4087M"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Ôó‡“úÿÿÿÿ8óÀ´…2J$4acc26f5-4a28-4591-ad4a-f731b2204b45
+ª
+java:S4087g"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Æ€»Çùÿÿÿÿ8ôÀ´…2J$702a71c3-3915-4da6-a1c9-824a5a742d8d
 g
-java:S6905D"Don't use the query "SELECT *".(öÒ× øÿÿÿÿ8¢°è„2J$17b1c175-c916-4654-867c-cc9afd2623c9
+java:S6905Z"Don't use the query "SELECT *".(öÒ× øÿÿÿÿ8õÀ´…2J$ec27396e-4ae8-4442-bf83-8c03a1348f20
+ª
+java:S4087f"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Ôó‡“úÿÿÿÿ8õÀ´…2J$a4d850a6-035c-4b65-85ee-0c1663c02f6a
+m	java:S106{"+Replace this use of System.out by a logger.(í£ŸŠ8÷À´…2J$8e6606cd-398a-4537-a695-461de2652e6f
+m	java:S106}"+Replace this use of System.out by a logger.( Ø€®8øÀ´…2J$be87dbea-cbbc-4639-9446-d5370fe59b36
