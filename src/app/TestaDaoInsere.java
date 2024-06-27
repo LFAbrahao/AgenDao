@@ -8,28 +8,20 @@ import model.Contato;
 
 public class TestaDaoInsere {
 	public static void main(String[] args) {
-		try (Scanner scanner = new Scanner(System.in)) {
-			System.out.println("Digite o nome do contato: ");
-			String nome = scanner.nextLine();
-
-			System.out.println("Digite o email do contato: ");
-			String email = scanner.nextLine();
-
-			System.out.println("Digite o endereço do contato: ");
-			String endereco = scanner.nextLine();
-
-			Contato contato = new Contato();
-			contato.setNome(nome);
-			contato.setEmail(email);
-			contato.setEndereco(endereco);
-
-			try {
-				ContatoDao dao = new ContatoDao();
-				dao.adiciona(contato);
-				System.out.println("Gravação feita no Banco de Dados");
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+		System.out.println("Quer adicionar um contato? (S/N)");
+		Scanner sc = new Scanner(System.in);
+		String resposta = sc.nextLine().toUpperCase();
+		if (resposta.equals("S")){
+            try {
+                ContatoDao contatoDao = new ContatoDao();
+				contatoDao.adiciona();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (resposta.equals("N")) {
+			System.out.println("Tchau tchau!");
+		} else {
+			System.out.println("Não entendi a sua resposta.");
 		}
 	}
 

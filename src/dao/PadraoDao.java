@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface PadraoDao {
-    void adiciona(Object model) throws SQLException;
+    void adiciona() throws SQLException;
 
     List<?> getLista() throws SQLException;
 
@@ -16,5 +16,5 @@ public interface PadraoDao {
 
     void removePorId(Long id) throws SQLException;
 
-	void alteraPorId(Long id, String novoNome, String novoEmail, String novoEndereco) throws SQLException;
+	void alteraPorId(Long id) throws SQLException;
 }

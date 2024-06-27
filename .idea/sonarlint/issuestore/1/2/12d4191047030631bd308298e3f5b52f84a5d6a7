@@ -1,35 +1,42 @@
 
 ¡
-java:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìœ¼ùÿÿÿÿ8ÖÀ´…2J$f5727d03-4e07-4cef-9813-6192c398b031
+java:S22935"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìœ¼ùÿÿÿÿ8İö÷Î…2J$d3ffdef2-6aa2-4826-9ead-605d354d2bb6
 Œ
-java:S11923"IDefine a constant instead of duplicating this literal "endereco" 3 times.(‡˜Ëİ8×À´…2J$c3c1c76c-02a3-4512-9e02-230827ab4e31
+java:S1192;"IDefine a constant instead of duplicating this literal "endereco" 4 times.(‡˜Ëİ8İö÷Î…2J$ab66ba88-9b7c-4345-9380-5b06ebe05b8d
 
-java:S11922"FDefine a constant instead of duplicating this literal "email" 3 times.(·í’ıÿÿÿÿ8×À´…2J$9ea733b4-ee0c-4301-b208-f0547d3eccbf
-’
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8çÀ´…2J$06d8a3eb-c66f-46fc-a58e-755148a32f64
+java:S1192:"FDefine a constant instead of duplicating this literal "email" 4 times.(·í’ıÿÿÿÿ8œıöÎ…2J$5b58e74f-42d6-4535-ae93-39909c97bec8
 ‘
-java:S2095+"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(˜àñY8çÀ´…2J$c586e1f6-a357-4784-b359-8b5a74d74dd5
+java:S20953"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(˜àñY8ñö÷Î…2J$17aefec7-6e0d-4949-9743-c0870feceaa9
 x
-java:S2209"5Change this instance-reference to a static reference.(Ìââó8êÀ´…2J$74f584e5-fc0d-4730-a22e-bbd66520e7d2
+java:S2209"5Change this instance-reference to a static reference.(Ìââó8±ıöÎ…2J$9bea1eab-9cbb-4236-8fbc-22bf7c7cbaac
 t
-java:S2440"1Remove this instantiation of "ConnectionFactory".(Ìââó8ëÀ´…2J$cd62990d-1fd4-49b7-8f38-80feff7efcaf
-~
-java:S1854"6Remove this useless assignment to local variable "sc".(ğÛ²¸øÿÿÿÿ8ëÀ´…2J$8721894b-ad5f-4822-9021-bc9b50cdceef
-o
-java:S1481"'Remove this unused "sc" local variable.(ğÛ²¸øÿÿÿÿ8îÀ´…2J$15b16881-015f-4f9a-a982-929d0013722e
+java:S2440"1Remove this instantiation of "ConnectionFactory".(Ìââó8±ıöÎ…2J$eb1c98fa-e62f-4356-badc-99ea5efefbab
+r	java:S106"+Replace this use of System.out by a logger.(ÆÒûşÿÿÿÿ8´ıöÎ…2J$16275ef7-ca4e-41e4-90f2-46706cb2bdd9
+m	java:S106"+Replace this use of System.out by a logger.(¦†Ü8´ıöÎ…2J$e7151088-7ccf-4331-b30e-3678d1752f96
+m	java:S106!"+Replace this use of System.out by a logger.(†ø£²8µıöÎ…2J$93d1dac7-c4d2-4d50-b41c-ea3fad2db077
+m	java:S106,"+Replace this use of System.out by a logger.(—ç×8¶ıöÎ…2J$8af142dd-b51c-4fec-a6f9-418b94a92f7a
 b
-java:S6905*"Don't use the query "SELECT *".(øâ¬8ïÀ´…2J$cbde5e4e-842a-4cf8-8ac8-69f1136da527
+java:S69052"Don't use the query "SELECT *".(øâ¬8ùö÷Î…2J$64a80840-d682-46ce-ae99-94f1cd5bc60e
 ª
-java:S4087N"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Æ€»Çùÿÿÿÿ8òÀ´…2J$699f95be-ddfa-44e5-b171-050fd57366a2
-b
-java:S6905@"Don't use the query "SELECT *".(ã¦åº8óÀ´…2J$1bd65c1e-9ec8-4110-9a58-2c45dba922f8
+java:S4087U"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Æ€»Çùÿÿÿÿ8ıö÷Î…2J$2b41d72f-7db1-4eee-9c5e-a47d661c0cee
+<
+java:S6905G"Don't use the query "SELECT *".(ã¦åº8”ÅõÏ…2
 ª
-java:S4087M"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Ôó‡“úÿÿÿÿ8óÀ´…2J$4acc26f5-4a28-4591-ad4a-f731b2204b45
-ª
-java:S4087g"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Æ€»Çùÿÿÿÿ8ôÀ´…2J$702a71c3-3915-4da6-a1c9-824a5a742d8d
+java:S4087T"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Ôó‡“úÿÿÿÿ8şö÷Î…2J$ba374106-59e3-43f6-b3fc-fa3ff0395001
+„
+java:S4087k"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Æ€»Çùÿÿÿÿ8•ÅõÏ…2
 g
-java:S6905Z"Don't use the query "SELECT *".(öÒ× øÿÿÿÿ8õÀ´…2J$ec27396e-4ae8-4442-bf83-8c03a1348f20
-ª
-java:S4087f"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Ôó‡“úÿÿÿÿ8õÀ´…2J$a4d850a6-035c-4b65-85ee-0c1663c02f6a
-m	java:S106{"+Replace this use of System.out by a logger.(í£ŸŠ8÷À´…2J$8e6606cd-398a-4537-a695-461de2652e6f
-m	java:S106}"+Replace this use of System.out by a logger.( Ø€®8øÀ´…2J$be87dbea-cbbc-4639-9446-d5370fe59b36
+java:S6905^"Don't use the query "SELECT *".(öÒ× øÿÿÿÿ8ıö÷Î…2J$83799081-44b3-4961-9ee3-200e14d83d3c
+„
+java:S4087j"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(Ôó‡“úÿÿÿÿ8–ÅõÏ…2
+Š
+java:S1659u"GDeclare "emailAtual" and all following declarations on a separate line.(§îİø8ÿö÷Î…2J$ec726141-fc13-445e-98d5-7007eac53357
+m	java:S106"+Replace this use of System.out by a logger.( Ø€®8¾ıöÎ…2J$6a63da83-cb4a-4b65-93c1-5d228b87deca
+n	java:S106†"+Replace this use of System.out by a logger.(â‡Ìë8¿ıöÎ…2J$9a17d655-7671-439b-96a0-7a38e3fb3e75
+n	java:S106‡"+Replace this use of System.out by a logger.(÷ª¶ 8÷÷Î…2J$8b93672d-a8ee-4a37-a1af-9020d61ac124
+n	java:S106"+Replace this use of System.out by a logger.(ƒØãù8÷÷Î…2J$00c25c77-f19b-42ed-a309-a6213e808f01
+s	java:S106"+Replace this use of System.out by a logger.(æÄåØıÿÿÿÿ8÷÷Î…2J$905749c6-cddc-4f10-bf28-7187c5f4251c
+s	java:S106”"+Replace this use of System.out by a logger.(»„ª†üÿÿÿÿ8÷÷Î…2J$60ac25cf-2bc9-4bc7-bb42-ad80bcfa6dc4
+s	java:S106•"+Replace this use of System.out by a logger.(ûÂœ ıÿÿÿÿ8ƒ÷÷Î…2J$6a7fb82d-7185-4ba8-b78f-e4f453646949
+n	java:S106¥"+Replace this use of System.out by a logger.(í£ŸŠ8ƒ÷÷Î…2J$584b463e-1d5e-4860-b65c-4dd105086ff0
+n	java:S106§"+Replace this use of System.out by a logger.( Ø€®8ÆÔòÏ…2J$71ce8e90-247c-4d93-8ef0-9fe455c15933

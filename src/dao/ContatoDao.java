@@ -21,20 +21,28 @@ public class ContatoDao implements PadraoDao {
 	}
 
 	@Override
-	public void adiciona(Object object) throws SQLException {
-		Contato contato = (Contato) object;
-		String sql = "insert into contatos(nome, email, endereco) values (?,?,?)";
-		PreparedStatement stmt = con.prepareStatement(sql);
-		Scanner sc = new Scanner(System.in);
+	public void adiciona() throws SQLException {
+		Scanner scanner = new Scanner(System.in);
 
-		stmt.setString(1, contato.getNome());
-		stmt.setString(2, contato.getEmail());
-		stmt.setString(3, contato.getEndereco());
+		System.out.print("Digite o nome: ");
+		String nome = scanner.nextLine();
 
-		stmt.execute();
+		System.out.print("Digite o email: ");
+		String email = scanner.nextLine();
 
-		stmt.close();
-		con.close();
+		System.out.print("Digite o endereço: ");
+		String endereco = scanner.nextLine();
+
+		String sql = "INSERT INTO contatos (nome, email, endereco) VALUES (?, ?, ?)";
+
+		try (PreparedStatement stmt = con.prepareStatement(sql)) {
+			stmt.setString(1, nome);
+			stmt.setString(2, email);
+			stmt.setString(3, endereco);
+
+			stmt.execute();
+			System.out.println("Contato adicionado com sucesso!");
+		}
 	}
 
 	@Override
@@ -54,7 +62,6 @@ public class ContatoDao implements PadraoDao {
 		
 		rset.close();
 		stmt.close();
-		con.close();
 		
 		return contatos;
 	}
@@ -76,13 +83,10 @@ public class ContatoDao implements PadraoDao {
 				}
 				rset.close();
 				stmt.close();
-				con.close();
 
 				return contatos;
 			}
-
 		}
-
 	}
 
 	@Override
@@ -101,7 +105,6 @@ public class ContatoDao implements PadraoDao {
 				}
 				rset.close();
 				stmt.close();
-				con.close();
 
 				return contato;
 			}
@@ -109,22 +112,61 @@ public class ContatoDao implements PadraoDao {
 	}
 
 	@Override
-	public void alteraPorId(Long id, String novoNome, String novoEmail, String novoEndereco) throws SQLException {
-	    String query = "UPDATE contatos SET nome = ?, email = ?, endereco = ? WHERE id = ?";
-	    
-	    try (PreparedStatement stmt = con.prepareStatement(query)) {
-	        stmt.setString(1, novoNome);
-	        stmt.setString(2, novoEmail);
-	        stmt.setString(3, novoEndereco);
-	        stmt.setLong(4, id);
-	        
-	        int linhasModificadas = stmt.executeUpdate();
-	        if (linhasModificadas> 0) {
-	            System.out.println("Contato atualizado com sucesso!");
-	        } else {
-	            System.out.println("Nenhum contato encontrado com o ID informado.");
-	        }
-	    }
+	public void alteraPorId(Long id) throws SQLException {
+		String querySelect = "SELECT nome, email, endereco FROM contatos WHERE id = ?";
+		String nomeAtual = null, emailAtual = null, enderecoAtual = null;
+
+		try (PreparedStatement stmt = con.prepareStatement(querySelect)) {
+			stmt.setLong(1, id);
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				nomeAtual = rs.getString("nome");
+				emailAtual = rs.getString("email");
+				enderecoAtual = rs.getString("endereco");
+			} else {
+				System.out.println("Nenhum contato encontrado com o ID informado.");
+				return;
+			}
+		}
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Nome atual: " + nomeAtual);
+		System.out.print("Novo nome (deixe em branco para manter): ");
+		String novoNome = scanner.nextLine();
+		if (novoNome.isEmpty()) {
+			novoNome = nomeAtual;
+		}
+
+		System.out.println("Email atual: " + emailAtual);
+		System.out.print("Novo email (deixe em branco para manter): ");
+		String novoEmail = scanner.nextLine();
+		if (novoEmail.isEmpty()) {
+			novoEmail = emailAtual;
+		}
+
+		System.out.println("Endereço atual: " + enderecoAtual);
+		System.out.print("Novo endereço (deixe em branco para manter): ");
+		String novoEndereco = scanner.nextLine();
+		if (novoEndereco.isEmpty()) {
+			novoEndereco = enderecoAtual;
+		}
+
+		String queryUpdate = "UPDATE contatos SET nome = ?, email = ?, endereco = ? WHERE id = ?";
+
+		try (PreparedStatement stmt = con.prepareStatement(queryUpdate)) {
+			stmt.setString(1, novoNome);
+			stmt.setString(2, novoEmail);
+			stmt.setString(3, novoEndereco);
+			stmt.setLong(4, id);
+
+			int linhasModificadas = stmt.executeUpdate();
+			if (linhasModificadas > 0) {
+				System.out.println("Contato atualizado com sucesso!");
+			} else {
+				System.out.println("Nenhum contato encontrado com o ID informado.");
+			}
+		}
 	}
 
 	@Override
@@ -133,15 +175,14 @@ public class ContatoDao implements PadraoDao {
 
 		try (PreparedStatement stmt = con.prepareStatement(sql)) {
 			stmt.setLong(1, id);
+
 			stmt.executeUpdate();
 		}
-
 	}
 
+	public void closeConnection() throws SQLException {
+		if (con != null && !con.isClosed()) {
+			con.close();
+		}
+	}
 }
-
-
-
-
-
-
